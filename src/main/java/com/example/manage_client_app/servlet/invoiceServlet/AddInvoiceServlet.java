@@ -57,7 +57,8 @@ public class AddInvoiceServlet extends HttpServlet {
         for(int i =0; i<productIdListStr.length; i++) {
             productIdList[i] = Long.parseLong(productIdListStr[i]);
             Float price = productDao.get(productIdList[i]).get().getPrice();
-            total += price*quantities.get(i);
+            Float vat = productDao.get(productIdList[i]).get().getVat();
+            total += (1+(vat/100))*price*quantities.get(i);
         }
 
         Optional<Customer> customer = customerDao.get(customerId);
