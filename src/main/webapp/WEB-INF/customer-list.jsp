@@ -6,9 +6,11 @@
 <head>
     <title>Customers</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="<c:url value="/assets/list.css"/>" rel="stylesheet" type="text/css">
+
 </head>
 <body>
-
+<jsp:include page="header.jsp"></jsp:include>
 
 <h1>Customers</h1>
 
@@ -21,6 +23,7 @@
         <li>${customer.phoneNumber}</li>
         <li>${customer.email}</li>
     </ul>
+    <div class="button">
     <form method="get" action="${pageContext.request.contextPath}/customers/update">
         <input type="hidden" value="${customer.customerId}" name="id">
         <button class="btn btn-primary">Edit</button>
@@ -29,9 +32,11 @@
         <input type="hidden" value="${customer.customerId}" name="customerId">
         <button class="btn btn-danger">Delete</button>
     </form>
+    </div>
 </c:forEach>
 
 <a class="btn btn-primary" href="${pageContext.request.contextPath}/customers/add">Add a customer</a>
+
 
 </body>
 </html>

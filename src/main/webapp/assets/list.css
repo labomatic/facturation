@@ -1,0 +1,12 @@
+.header {
+    display: flex;
+    flex-direction: row;
+}
+
+.button {
+    width: 10%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

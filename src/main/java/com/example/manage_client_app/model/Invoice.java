@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Entity
 public class Invoice {
@@ -30,6 +31,13 @@ public class Invoice {
 
     public Invoice(LocalDate date, Float total, Customer customer) {
         this.invoiceDate = date;
+        this.total = total;
+        this.customer = customer;
+    }
+
+    public Invoice(Long invoiceId, LocalDate date, Float total, Customer customer) {
+        this.invoiceDate = date;
+        this.invoiceId = invoiceId;
         this.total = total;
         this.customer = customer;
     }
