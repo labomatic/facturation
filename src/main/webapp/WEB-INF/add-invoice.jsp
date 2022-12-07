@@ -25,6 +25,15 @@
 </c:forEach>
   </select>
 
+ <fieldset>
+   <legend>Products :</legend>
+  <c:forEach items="${products}" var="product">
+    <input type="checkbox" id="product" value="${product.productId}" name="product">
+    <label for="product">${product.name}</label>
+    <label for="productQuantity">-> Quantity</label>
+    <input type="number" min="0" step="1" id="productQuantity" name="productQuantity">
+  </c:forEach>
+ </fieldset>
   <button>Add</button>
 </form>
 

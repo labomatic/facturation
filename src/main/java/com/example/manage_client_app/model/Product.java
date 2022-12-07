@@ -30,6 +30,13 @@ public class Product {
 
     public Product() {}
 
+    public Product(String name, String description, Float price, Float vat) {
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.vat = vat;
+    }
+
     public Long getProductId() {
         return productId;
     }
