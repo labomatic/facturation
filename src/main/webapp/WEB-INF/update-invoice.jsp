@@ -27,8 +27,6 @@
   <label for="invoiceDate">Date :</label>
   <input id="invoiceDate" type="date" name="invoiceDate" value="${invoice.invoiceDate}">
 
-  <label for="invoiceTotal">Total :</label>
-  <input id="invoiceTotal" type="number" step="0.01" min="0" name="invoiceTotal" value="${invoice.total}">
 
   <label for="invoiceCustomer">Customer :</label>
   <select selected="selected" id="invoiceCustomer" name="invoiceCustomer">

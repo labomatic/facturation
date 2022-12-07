@@ -22,6 +22,12 @@ public class InvoiceProductAssociation {
 
     public InvoiceProductAssociation () {}
 
+    public InvoiceProductAssociation(Product product, Invoice invoice, Integer integer) {
+        this.product = product;
+        this.invoice = invoice;
+        this.productQuantity = integer;
+    }
+
 
     //getters/setters
     public Long getInvoiceProductAssociationId() {

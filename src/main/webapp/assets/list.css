@@ -4,9 +4,13 @@
 }
 
 .button {
-    width: 10%;
+    width: 20%;
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+body {
+    margin-left: 5%;
 }

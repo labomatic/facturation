@@ -14,8 +14,6 @@
   <label for="invoiceDate">Date :</label>
   <input id="invoiceDate" type="date" name="invoiceDate">
 
-  <label for="invoiceTotal">Total :</label>
-  <input id="invoiceTotal" type="number" step="0.01" min="0" name="invoiceTotal">
 
   <label for="invoiceCustomer">Customer :</label>
   <select id="invoiceCustomer" name="invoiceCustomer">

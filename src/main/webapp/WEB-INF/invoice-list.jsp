@@ -18,14 +18,25 @@
     <ul>
         <li>${invoice.invoiceId}</li>
         <li>${invoice.invoiceDate}</li>
-        <li>${invoice.total}</li>
+        <li>${invoice.total}€</li>
         <li>${invoice.customer.name}</li>
+
+        <c:forEach items="${invoice.getAssociationList()}" var="obj">
+            <li>${obj.getProductQuantity()}x ${obj.getProduct().getName()}</li>
+
+        </c:forEach>
+
     </ul>
 <div class="button">
+    <form method="get" action="${pageContext.request.contextPath}/invoices/details">
+        <input type="hidden" value="${invoice.invoiceId}" name="id">
+        <button class="btn btn-primary">Details</button>
+    </form>
     <form method="get" action="${pageContext.request.contextPath}/invoices/update">
         <input type="hidden" value="${invoice.invoiceId}" name="id">
         <button class="btn btn-primary">Edit</button>
     </form>
+
     <form method="post" action="${pageContext.request.contextPath}/invoices/delete">
         <input type="hidden" value="${invoice.invoiceId}" name="invoiceId">
         <button class="btn btn-danger">Delete</button>

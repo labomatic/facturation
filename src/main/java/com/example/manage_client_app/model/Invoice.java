@@ -24,7 +24,7 @@ public class Invoice {
     @ManyToOne
     private Customer customer;
 
-    @OneToMany(mappedBy = "invoice")
+    @OneToMany(mappedBy = "invoice", fetch=FetchType.EAGER)
     private List<InvoiceProductAssociation> associationList = new ArrayList<>();
 
     public Invoice() {}
